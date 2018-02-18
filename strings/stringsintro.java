@@ -3,6 +3,7 @@
 // Sum the lengths of A and B.
 // Determine if A is lexicographically larger than B (i.e.: does A come before B in the dictionary?).
 // Capitalize the first letter in A and B and print them on a single line, separated by a space.
+// this fails one of the automated tests despite the test output being the same as the test output
 
 import java.io.*;
 import java.util.*;
