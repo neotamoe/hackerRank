@@ -17,7 +17,7 @@ public class Solution {
         String B=sc.next();
         /* Enter your code here. Print output to STDOUT. */
         System.out.println(A.length()+B.length());
-        if(A.compareTo(B)<0){
+        if(A.compareTo(B)<=0){
             System.out.println("No");
         } else if(A.compareTo(B)>0){
             System.out.println("Yes");
