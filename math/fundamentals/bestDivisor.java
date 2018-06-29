@@ -18,8 +18,6 @@ import java.util.regex.*;
 
 public class Solution {
 
-    //try test case 100000--> answer should be 625
-
     static int bestDivisor(int n){
         int bestDivisor = 1;
         if(n<10){
@@ -29,8 +27,7 @@ public class Solution {
             if(n%i==0){
                 int divisor1 = i;
                 int divisor2 = n/i;
-                System.err.println("divisor1: " + divisor1 + " divisor2: " + divisor2);
-                System.err.println(calculateSum(divisor1) + " " + calculateSum(divisor2));
+
                 if(calculateSum(divisor1)>calculateSum(bestDivisor)){
                     bestDivisor = divisor1;
                 }
@@ -43,8 +40,6 @@ public class Solution {
                 if(calculateSum(divisor2)==calculateSum(bestDivisor)){
                     bestDivisor = divisor2 < bestDivisor ? divisor2 : bestDivisor;
                 }
-                System.err.println("current bestDivisor: " + bestDivisor);
-
             }
         }
         return bestDivisor;
