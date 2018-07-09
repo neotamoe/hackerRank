@@ -1,5 +1,3 @@
-// NOTE: NOT YET FINISHED--WIP 7/8/18
-// passing first few cases, not passing remaining tests
 // Akash and Akhil are playing a game. They have N balls numbered from 0 to N-1. Akhil
 // asks Akash to reverse the position of the balls, i.e., to change the order from say,
 // 0,1,2,3 to 3,2,1,0. He further asks Akash to reverse the position of the balls N times,
@@ -27,19 +25,17 @@ import java.util.regex.*;
 
 public class Solution {
 
-    public static int reverser (int n, int k){
-        if(k==0){
-            return 1;
-        } else if (k==1 && n>3){
-           return 3;
-        } else if(k==1 && n<=3){
-            return 2;
-        } else if (k<n/2){
-            return (k+1)*2;
-        } else {  //if (k>=n/2)
-            return (n-k) + (k-1);
-        }
-    }
+  public static int reverser (int n, int k){
+      if(k==0){
+          return 1;
+      } else if (k==n-1){
+          return 0;
+      } else if (k<n/2){
+          return (k*2)+1;
+      } else {  
+          return ((n-1)-k)*2;
+      }
+  }
 
     private static final Scanner scanner = new Scanner(System.in);
 
