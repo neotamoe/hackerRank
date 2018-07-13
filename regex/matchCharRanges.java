@@ -8,13 +8,12 @@
 // [A_Z] is the same as [ABCDEFGHIJKLMNOPQRSTUVWXYZ].
 // [0-9] is the same as [0123456789].
 // In addition, if you use a caret (^) as the first character inside a character class,
-// it will match anything that is not in that range. For example, [^0-9] matches any character 
+// it will match anything that is not in that range. For example, [^0-9] matches any character
 // that is not a digit in the inclusive range from 0 to 9. It's important to note that, when
 // used outside of (immediately preceding) a character or character class, the caret matches
 // the first character in the string against that character or set of characters.
 //
 // Task
-//
 // Write a RegEx that will match a string satisfying the following conditions:
 //
 // The string's length is >=5.
