@@ -8,7 +8,7 @@
 // Here, the text name is hidden inside the tags h1 and b.
 //
 // Help Charlie in listing all the links and the text name of the links.
-// 
+//
 // Input Format
 // The first line contains the number of lines in the fragment (N). This is followed by
 // N lines from a valid HTML document or fragment.
@@ -35,11 +35,9 @@ public class Solution {
         int nLines = Integer.parseInt(scanner.nextLine());
         for(int i=0; i<nLines; i++){
             String test = scanner.nextLine();
-            Pattern p = Pattern.compile("<a\\shref=\"(.+?)(?=\")\"(.*)>(.+)</a>");
-
-            // System.err.println("p: " + p);
+            Pattern p = Pattern.compile("<a\\shref=\"(.*?)(?=\")(.*?)(?=>)>(.+?)(?=</a>)");
             Matcher m = p.matcher(test);
-            if(m.find()){
+            while(m.find()){
                 System.out.println(m.group(1) + "," + m.group(3));
             }
         }
